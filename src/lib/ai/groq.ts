@@ -6,7 +6,7 @@ const groq = new Groq({
 });
 
 // ── Model to use ──────────────────────────────────────────────────────
-const MODEL = "llama-3.1-8b-instant";
+const MODEL = "llama-3.3-70b-versatile";
 
 // ── Build system prompt ───────────────────────────────────────────────
 export function buildSystemPrompt(
