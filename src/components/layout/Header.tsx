@@ -1,6 +1,6 @@
 "use client";
 
-import { Search, Bell, User, Zap } from "lucide-react";
+import { Search, Bell, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
@@ -14,7 +14,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 
-// ── Mode label map ────────────────────────────────────────────────────
 const modeLabels: Record<string, { label: string; color: string }> = {
   chat:      { label: "Chat",          color: "bg-brand-100 text-brand-700" },
   summary:   { label: "Summary",       color: "bg-violet-100 text-violet-700" },
@@ -33,14 +32,12 @@ export default function Header({ mode }: { mode?: string }) {
 
   return (
     <header className="h-16 bg-white border-b border-surface-200 flex items-center px-6 gap-4 shrink-0">
-      {/* Current mode badge */}
       <div className="flex items-center gap-2">
         <Badge className={`${current.color} border-0 font-medium text-xs px-2.5`}>
           {current.label}
         </Badge>
       </div>
 
-      {/* Search bar */}
       <div className="flex-1 max-w-md relative">
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-slate-400" />
         <Input
@@ -50,7 +47,6 @@ export default function Header({ mode }: { mode?: string }) {
       </div>
 
       <div className="flex items-center gap-2 ml-auto">
-        {/* Upgrade button */}
         <Button
           size="sm"
           variant="outline"
@@ -60,7 +56,6 @@ export default function Header({ mode }: { mode?: string }) {
           Upgrade
         </Button>
 
-        {/* Notifications */}
         <Button
           variant="ghost"
           size="icon"
@@ -70,7 +65,6 @@ export default function Header({ mode }: { mode?: string }) {
           <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-brand-500 rounded-full" />
         </Button>
 
-        {/* User avatar */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="rounded-xl p-1 h-9 w-9">
