@@ -26,10 +26,6 @@ const modeLabels: Record<string, { label: string; color: string }> = {
   exam:      { label: "Exam Mode",     color: "bg-orange-100 text-orange-700" },
   planner:   { label: "Study Planner", color: "bg-teal-100 text-teal-700" },
   voice:     { label: "Voice Q&A",     color: "bg-purple-100 text-purple-700" },
-  exam:    { label: "Exam Mode",     color: "bg-orange-100 text-orange-700" },
-  voice:   { label: "Voice Q&A",     color: "bg-purple-100 text-purple-700" },
-  notes:   { label: "Notes",         color: "bg-emerald-100 text-emerald-700" },
-  planner: { label: "Study Planner", color: "bg-teal-100 text-teal-700" },
 };
 
 export default function Header({ mode }: { mode?: string }) {
