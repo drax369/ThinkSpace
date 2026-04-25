@@ -34,7 +34,7 @@ Return ONLY valid JSON, no markdown, no extra text.`,
         },
         {
           role: "user",
-          content: `Create flashcards from this document:\n\n${documentContent.slice(0, 15000)}`,
+          content: `Create flashcards from this document:\n\n${documentContent.slice(0, 6000)}`,
         },
       ],
       temperature: 0.5,

@@ -38,7 +38,7 @@ Return ONLY valid JSON, no markdown, no extra text.`,
         },
         {
           role: "user",
-          content: `Create a mind map for:\n\n${documentContent.slice(0, 15000)}`,
+          content: `Create a mind map for:\n\n${documentContent.slice(0, 6000)}`,
         },
       ],
       temperature: 0.5,

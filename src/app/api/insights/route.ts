@@ -35,7 +35,7 @@ Generate 3-4 items per category. Return ONLY valid JSON, no markdown.`,
         },
         {
           role: "user",
-          content: `Analyze this document deeply:\n\n${documentContent.slice(0, 15000)}`,
+          content: `Analyze this document deeply:\n\n${documentContent.slice(0, 6000)}`,
         },
       ],
       temperature: 0.6,
