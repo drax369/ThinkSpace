@@ -20,9 +20,12 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // ✅ Trim document content to stay within Groq's token limit
+    const trimmedContent = documentContent.slice(0, 8000);
+
     const response = await getChatResponse(
       message,
-      documentContent,
+      trimmedContent,
       history ?? [],
       explainMode ?? "normal"
     );
